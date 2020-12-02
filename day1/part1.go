@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"strconv"
 )
 
 // Part1 func
@@ -42,7 +41,8 @@ func readInput(inputFileName string) []int {
 	scanner := bufio.NewScanner(f)
 	ins := make([]int, 0)
 	for scanner.Scan() {
-		in, err := strconv.Atoi(scanner.Text())
+		in := 0
+		_, err := fmt.Sscanf(scanner.Text(), "%d", &in)
 		if err != nil {
 			log.Fatalf("Invalid input: %s", scanner.Text())
 		}
