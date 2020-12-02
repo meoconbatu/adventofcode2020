@@ -7,7 +7,7 @@ import (
 )
 
 func TestPart1Core(t *testing.T) {
-	ins := readInput("day1/input.txt")
+	ins := readInput("input.txt")
 	got := part1Core(ins, 2020)
 	assert.EqualValues(t, 468051, got)
 }
