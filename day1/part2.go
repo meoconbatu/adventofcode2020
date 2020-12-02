@@ -1,17 +1,18 @@
-package main
+package day1
 
 import (
 	"fmt"
 )
 
-func day1Part2() {
-	inputFileName := "day1_input.txt"
-	ins := day1ReadInput(inputFileName)
-	output := day1Part2Core(ins, 2020)
+// Part2 func
+func Part2() {
+	inputFileName := "day1/input.txt"
+	ins := readInput(inputFileName)
+	output := part2Core(ins, 2020)
 	fmt.Print(output)
 }
 
-func day1Part2Core(ins []int, target int) int {
+func part2Core(ins []int, target int) int {
 	num1, num2, num3 := findThree(ins, 2020)
 	return num1 * num2 * num3
 }

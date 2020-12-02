@@ -1,4 +1,4 @@
-package main
+package day1
 
 import (
 	"bufio"
@@ -8,14 +8,15 @@ import (
 	"strconv"
 )
 
-func day1Part1() {
-	inputFileName := "day1_input.txt"
-	ins := day1ReadInput(inputFileName)
-	output := day1Part1Core(ins, 2020)
+// Part1 func
+func Part1() {
+	inputFileName := "day1/input.txt"
+	ins := readInput(inputFileName)
+	output := part1Core(ins, 2020)
 	fmt.Println(output)
 }
 
-func day1Part1Core(ins []int, target int) int {
+func part1Core(ins []int, target int) int {
 	num1, num2 := findTwo(ins, 2020)
 	return num1 * num2
 }
@@ -33,7 +34,7 @@ func findTwo(ins []int, target int) (int, int) {
 	}
 	return 0, 0
 }
-func day1ReadInput(inputFileName string) []int {
+func readInput(inputFileName string) []int {
 	f, err := os.Open(inputFileName)
 	if err != nil {
 		log.Fatalf("No input file: %s", inputFileName)

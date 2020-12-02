@@ -1,6 +1,9 @@
 package main
 
-import "flag"
+import (
+	"flag"
+	"meoconbatu/adventofcode2020/day1"
+)
 
 func main() {
 	dayth := flag.Int("day", 1, "day of puzzle")
@@ -11,9 +14,9 @@ func main() {
 	switch *dayth {
 	case 1:
 		if *part == 1 {
-			day1Part1()
+			day1.Part1()
 		} else {
-			day1Part2()
+			day1.Part2()
 		}
 	}
 }
