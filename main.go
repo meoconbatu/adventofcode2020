@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"meoconbatu/adventofcode2020/day1"
+	"meoconbatu/adventofcode2020/day2"
 )
 
 func main() {
@@ -18,5 +19,10 @@ func main() {
 		} else {
 			day1.Part2()
 		}
+	case 2:
+		if *part == 1 {
+			day2.Part1()
+		}
 	}
+
 }
