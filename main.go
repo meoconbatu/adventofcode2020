@@ -22,6 +22,8 @@ func main() {
 	case 2:
 		if *part == 1 {
 			day2.Part1()
+		} else {
+			day2.Part2()
 		}
 	}
 
