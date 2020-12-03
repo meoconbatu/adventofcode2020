@@ -4,6 +4,7 @@ import (
 	"flag"
 	"meoconbatu/adventofcode2020/day1"
 	"meoconbatu/adventofcode2020/day2"
+	"meoconbatu/adventofcode2020/day3"
 )
 
 func main() {
@@ -24,6 +25,12 @@ func main() {
 			day2.Part1()
 		} else {
 			day2.Part2()
+		}
+	case 3:
+		if *part == 1 {
+			day3.Part1()
+		} else {
+			day3.Part2()
 		}
 	}
 
