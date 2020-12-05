@@ -6,6 +6,7 @@ import (
 	"meoconbatu/adventofcode2020/day2"
 	"meoconbatu/adventofcode2020/day3"
 	"meoconbatu/adventofcode2020/day4"
+	"meoconbatu/adventofcode2020/day5"
 )
 
 func main() {
@@ -38,6 +39,12 @@ func main() {
 			day4.Part1()
 		} else {
 			day4.Part2()
+		}
+	case 5:
+		if *part == 1 {
+			day5.Part1()
+		} else {
+			day5.Part2()
 		}
 	}
 
