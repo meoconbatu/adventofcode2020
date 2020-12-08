@@ -9,6 +9,7 @@ import (
 	"meoconbatu/adventofcode2020/day4"
 	"meoconbatu/adventofcode2020/day5"
 	"meoconbatu/adventofcode2020/day6"
+	"meoconbatu/adventofcode2020/day7"
 )
 
 var funcMap map[string]interface{}
@@ -21,6 +22,7 @@ func init() {
 		"041": day4.Part1, "042": day4.Part2,
 		"051": day5.Part1, "052": day5.Part2,
 		"061": day6.Part1, "062": day6.Part2,
+		"071": day7.Part1, "072": day7.Part2,
 	}
 }
 func main() {
