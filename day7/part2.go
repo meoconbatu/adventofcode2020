@@ -15,12 +15,8 @@ func part2Core(ins map[string]rule) int {
 	return countBagColour2(ins)
 }
 
-var sum int
-
 func countBagColour2(rules map[string]rule) int {
-	sum = 0
 	colour := "shiny gold"
-	// f(rules, bag{1, colour})
 	return f(rules, bag{1, colour})
 }
 
@@ -32,6 +28,5 @@ func f(rules map[string]rule, target bag) int {
 	for _, k := range rules[target.color].children {
 		temp += k.num + k.num*f(rules, k)
 	}
-	// sum += temp
 	return temp
 }

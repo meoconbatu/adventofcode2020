@@ -23,7 +23,6 @@ func Part1() {
 	inputFileName := "day7/input.txt"
 	ins := readInput(inputFileName)
 	output := part1Core(ins)
-	fmt.Println(ins["mirrored beige"])
 	fmt.Println(output)
 }
 func part1Core(ins map[string]rule) int {
@@ -51,8 +50,6 @@ func countBagColour(rules map[string]rule) int {
 	return len(visited) - 1
 }
 
-// bright gold bags contain 4 wavy olive bags, 3 muted gray bags, 4 dark indigo bags, 5 dark chartreuse bags.
-// drab blue bags contain 1 light green bag.
 func readInput(inputFileName string) map[string]rule {
 	f, err := os.Open(inputFileName)
 	if err != nil {
