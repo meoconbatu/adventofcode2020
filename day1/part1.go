@@ -16,13 +16,13 @@ func Part1() {
 }
 
 func part1Core(ins []int, target int) int {
-	num1, num2 := findTwo(ins, 2020)
+	num1, num2 := FindTwo(ins, 2020)
 	return num1 * num2
 }
 
-// findTwo returns two numbers in ins array that sum to target.
-// Returns two 0 if cannot find the answer.
-func findTwo(ins []int, target int) (int, int) {
+// FindTwo returns two numbers in ins array that sum to target.
+// Returns 0, 0 if cannot find the answer.
+func FindTwo(ins []int, target int) (int, int) {
 	hashTable := make(map[int]bool)
 	for _, in := range ins {
 		complement := target - in

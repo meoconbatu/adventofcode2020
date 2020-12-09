@@ -18,11 +18,11 @@ func part2Core(ins []int, target int) int {
 }
 
 // findThree returns three numbers in ins array that sum to target.
-// Returns three 0 if cannot find the answer.
+// Returns 0, 0, 0 if cannot find the answer.
 func findThree(ins []int, target int) (int, int, int) {
 	for i := 0; i < len(ins); i++ {
 		num1 := ins[i]
-		num2, num3 := findTwo(ins[i:], target-num1)
+		num2, num3 := FindTwo(ins[i:], target-num1)
 		if num2 != 0 {
 			return num1, num2, num3
 		}
