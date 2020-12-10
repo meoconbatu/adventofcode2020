@@ -1,8 +1,9 @@
 package main
 
 import (
-	"flag"
 	"fmt"
+	"log"
+	"meoconbatu/adventofcode2020/config"
 	"meoconbatu/adventofcode2020/day1"
 	"meoconbatu/adventofcode2020/day2"
 	"meoconbatu/adventofcode2020/day3"
@@ -30,14 +31,18 @@ func init() {
 	}
 }
 func main() {
-	dayth := flag.Int("day", 1, "day of puzzle")
-	part := flag.Int("part", 1, "1 or 2")
+	conf, err := config.Load()
+	if err != nil {
+		log.Fatal("cannot load config:", err)
+	}
 
-	flag.Parse()
-
-	execute(*dayth, *part)
+	execute(conf.Dayth, conf.Part)
 }
 func execute(dayth, part int) {
 	key := fmt.Sprintf("%02d%d", dayth, part)
-	funcMap[key].(func())()
+	if f, ok := funcMap[key]; ok {
+		f.(func())()
+	} else {
+		log.Fatalf("Invalid flag input, got:%d, %d", dayth, part)
+	}
 }
