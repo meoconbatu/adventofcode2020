@@ -2,7 +2,7 @@ package day9
 
 import (
 	"fmt"
-	"math"
+	"meoconbatu/adventofcode2020/utils"
 )
 
 // Part2 func
@@ -15,7 +15,7 @@ func Part2() {
 func part2Core(ins []int) int {
 	target := findFirstInvalidNumber(ins)
 	i, j := findSubSet(ins, target)
-	min, max := findMinMax(ins[i : j+1])
+	min, max := utils.FindMinMax(ins[i : j+1])
 	return min + max
 }
 
@@ -39,18 +39,4 @@ func findSubSet(ins []int, target int) (int, int) {
 		}
 	}
 	return 0, 0
-}
-
-// findMinMax func return min and max number of ins array
-func findMinMax(ins []int) (int, int) {
-	min, max := math.MaxInt64, math.MinInt64
-	for i := 0; i < len(ins); i++ {
-		if ins[i] > max {
-			max = ins[i]
-		}
-		if ins[i] < min {
-			min = ins[i]
-		}
-	}
-	return min, max
 }
