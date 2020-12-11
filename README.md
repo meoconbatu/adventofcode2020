@@ -8,5 +8,5 @@ See https://adventofcode.com/2020 for more information.
 
 ```bash
 go build
-./adventofcode2020 -day=1 -part=1
+./adventofcode2020 --day=1 --part=1
 ```
