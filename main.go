@@ -5,6 +5,7 @@ import (
 	"log"
 	"meoconbatu/adventofcode2020/config"
 	"meoconbatu/adventofcode2020/day1"
+	"meoconbatu/adventofcode2020/day10"
 	"meoconbatu/adventofcode2020/day2"
 	"meoconbatu/adventofcode2020/day3"
 	"meoconbatu/adventofcode2020/day4"
@@ -28,6 +29,7 @@ func init() {
 		"071": day7.Part1, "072": day7.Part2,
 		"081": day8.Part1, "082": day8.Part2,
 		"091": day9.Part1, "092": day9.Part2,
+		"101": day10.Part1, "102": day10.Part2,
 	}
 }
 func main() {
