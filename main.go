@@ -10,6 +10,7 @@ import (
 	"meoconbatu/adventofcode2020/day12"
 	"meoconbatu/adventofcode2020/day13"
 	"meoconbatu/adventofcode2020/day14"
+	"meoconbatu/adventofcode2020/day15"
 	"meoconbatu/adventofcode2020/day2"
 	"meoconbatu/adventofcode2020/day3"
 	"meoconbatu/adventofcode2020/day4"
@@ -38,6 +39,7 @@ func init() {
 		"121": day12.Part1, "122": day12.Part2,
 		"131": day13.Part1, "132": day13.Part2,
 		"141": day14.Part1, "142": day14.Part2,
+		"151": day15.Part1, "152": day15.Part2,
 	}
 }
 func main() {
