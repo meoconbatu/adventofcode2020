@@ -11,6 +11,8 @@ import (
 	"meoconbatu/adventofcode2020/day13"
 	"meoconbatu/adventofcode2020/day14"
 	"meoconbatu/adventofcode2020/day15"
+	"meoconbatu/adventofcode2020/day16"
+	"meoconbatu/adventofcode2020/day17"
 	"meoconbatu/adventofcode2020/day2"
 	"meoconbatu/adventofcode2020/day3"
 	"meoconbatu/adventofcode2020/day4"
@@ -40,6 +42,8 @@ func init() {
 		"131": day13.Part1, "132": day13.Part2,
 		"141": day14.Part1, "142": day14.Part2,
 		"151": day15.Part1, "152": day15.Part2,
+		"161": day16.Part1, "162": day16.Part2,
+		"171": day17.Part1, "172": day17.Part2,
 	}
 }
 func main() {
@@ -47,7 +51,6 @@ func main() {
 	if err != nil {
 		log.Fatal("cannot load config:", err)
 	}
-
 	execute(conf.Dayth, conf.Part)
 }
 func execute(dayth, part int) {
